@@ -78,7 +78,9 @@ class TickerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Ticket::findOrFail($id)->update($request->except('_token'));
+
+        return back();
     }
 
     /**
