@@ -25,5 +25,6 @@ class Ticket extends Model
         'order_date',
         'order_time',
         'chair_no',
+        'price'
     ];
 }

@@ -29,6 +29,15 @@
     />
 </div>
 
+<div>
+    <x-form.text 
+        label="Harga Tiket"
+        value="{{ @$item->price }}"
+        name="price"
+        type="number"
+    />
+</div>
+
 <div class="grid md:grid-cols-2 md:gap-6">
     <x-form.text 
         label="Kota Asal"

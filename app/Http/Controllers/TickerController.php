@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ticket;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class TickerController extends Controller
@@ -44,7 +45,24 @@ class TickerController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = [
+            'title' => 'Contoh Cetak PDF',
+            'ticket' => Ticket::findOrFail($id) 
+        ];
+
+        // Menggunakan ukuran custom (80mm x auto)
+        $pdf = PDF::loadView('pdf', $data);
+        
+        // Set ukuran kertas custom
+        $pdf->setPaper([0, 0, 226.772, 500], 'portrait'); // 80mm = 226.772pt, tinggi menyesuaikan (-1)
+        $pdf->setOptions([
+            'isHtml5ParserEnabled' => true,
+            'isRemoteEnabled' => true,
+            'defaultFont' => 'Times New Roman', // Pastikan font default diatur ke Times New Roman
+        ]);
+
+        // Menyimpan dan menampilkan PDF
+        return $pdf->stream('cetak.pdf');
     }
 
     /**

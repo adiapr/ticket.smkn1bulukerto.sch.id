@@ -98,8 +98,8 @@
                                         {{ $item->name }}
                                     </th>
                                     <td class="px-6 py-4">
-                                        {{ $item->agent_name }} <br>
-                                        <em>- {{ $item->agent_code }} -</em>
+                                        {{ $item->agent_name }} {{ $item->agent_code }} <br>
+                                        Rp.{{ number_format($item->price) }},-
                                     </td>
                                     <td class="px-6 py-4">
                                         <table>
@@ -140,9 +140,9 @@
                                         {{ $item->chair_no }}
                                     </td>
                                     <td class="flex items-center px-6 py-6 align-center gap-5">
-                                        <a href="#" class="font-medium text-yellow-600 dark:text-yellow-500 hover:underline me-3"><i class="bi bi-printer"></i></a>
-                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><i class="bi bi-pencil"></i></a>
-                                        <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"><i class="bi bi-trash"></i></a>
+                                        <a href="{{ route('tickets.show', $item->id) }}" class="font-medium text-yellow-600 dark:text-yellow-500 hover:underline me-3"><i class="bi bi-printer"></i> Cetak </a>
+                                        {{-- <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><i class="bi bi-pencil"></i></a>
+                                        <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"><i class="bi bi-trash"></i></a> --}}
                                     </td>
                                 </tr>
                                 @endforeach
