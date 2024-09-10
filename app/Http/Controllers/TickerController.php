@@ -58,7 +58,7 @@ class TickerController extends Controller
         $pdf->setOptions([
             'isHtml5ParserEnabled' => true,
             'isRemoteEnabled' => true,
-            'defaultFont' => 'Times New Roman', // Pastikan font default diatur ke Times New Roman
+            // 'defaultFont' => 'Times New Roman', // Pastikan font default diatur ke Times New Roman
         ]);
 
         // Menyimpan dan menampilkan PDF

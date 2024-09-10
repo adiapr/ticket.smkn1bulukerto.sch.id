@@ -33,21 +33,38 @@
             padding: 0; /* Hapus padding default pada h3 */
             width: 100%; /* Mengisi lebar penuh */
         }
+        .text-sm{
+            font-size: 14px;
+        }
+        .mt-2{
+            margin-top: 2px;
+        }
     </style>
 </head>
 <body>
     <div class="content">
-        <h3 style="font-weight: normal">TIKET {{ $ticket->agent_name }} #{{ $ticket->agent_code }}</h3>
+        <img src="https://webstoriess.enkosa.com/wp-content/uploads/2024/01/Download-Logo-Bus-Agra-Mas-PNG.png" alt=""
+            width="200"
+            style="margin: -40px 0px; filter: grayscale(100%);"
+        >
+        <h3>PO. {{ $ticket->agent_name }} #{{ $ticket->agent_code }}</h3>
+        <b class="text-sm">TELP. 021. 293 899 71, SMS 082221119500</b> <br>
+        <span class="text-sm">
+            www.agramasgroup.com
+        </span> <br class="mt-2" style="margin: 10px ">
+        <span class="text-sm mt-2">
+            10 Tiket Gratis 1 Tiket Dengan Nama yang sama selama 1 Tahun
+        </span>
         <h3>{{ $ticket->start_city }} - {{ $ticket->end_city }}</h3>
         <h3>Rp.{{ number_format($ticket->price) }},-</h3>
 
-        <h4>Pembelian {{ \Carbon\Carbon::parse($ticket->order_date)->format('d M y') }} {{ $ticket->order_time }}</h4>
+        <p>Pembelian {{ \Carbon\Carbon::parse($ticket->order_date)->format('d M y') }} {{ $ticket->order_time }}</p>
         <!-- Tambahkan konten tambahan sesuai kebutuhan -->
         <div style="width: 40%; float: left; text-align: center; display:flex; align-items:center">
             <div>
                 <br>
                 <br>
-                
+
                 <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/800px-QR_code_for_mobile_English_Wikipedia.svg.png" alt=""
                     width="100"
@@ -59,17 +76,17 @@
         <div style="width: 60%; float: left">
             <div style="margin-right: 80px">
                 <table style="text-align: center">
-                    <tr>
+                    <tr style="vertical-align: top">
                         <td>
                             <b>Nama :</b> <br>
                             {{ $ticket->name }}
                         </td>
                         <td>
-                            <b>Telephone :</b> <br>
-                            {{ $ticket->phone }}
+                            <b>Telephon :</b> <br>
+                            <span class="text-sm">{{ $ticket->phone }} </span>
                         </td>
                     </tr>
-                    <tr style="padding-top: 100px">
+                    <tr style="vertical-align: top">
                         <td>
                             <br>
                             <b>Dari :</b> <br>
