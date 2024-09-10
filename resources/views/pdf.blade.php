@@ -90,15 +90,19 @@
                         <td>
                             <br>
                             <b>Dari :</b> <br>
-                            {{ $ticket->start_location  }}
-                            <br>
-                            {{ \Carbon\Carbon::parse($ticket->start_date)->format('d M y') }} <br>{{ $ticket->start_time }}
+                            <span class="text-sm">
+                                {{ $ticket->start_location  }}
+                                <br>
+                                {{ \Carbon\Carbon::parse($ticket->start_date)->format('d M y') }} <br>{{ $ticket->start_time }}
+                            </span>
                         </td>
                         <td>
                             <br>
                             <b>Tujuan :</b> <br>
-                            {{ $ticket->end_location }} <br>
-                            {{ \Carbon\Carbon::parse($ticket->end_date )->format('d M y') }} <br> {{ $ticket->end_time }}
+                            <span class="text-sm">
+                                {{ $ticket->end_location }} <br>
+                                {{ \Carbon\Carbon::parse($ticket->end_date )->format('d M y') }} <br> {{ $ticket->end_time }}
+                            </span>
                         </td>
                     </tr>
                     <tr style="padding-top: 100px">
