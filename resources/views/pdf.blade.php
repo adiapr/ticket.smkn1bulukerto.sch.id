@@ -47,7 +47,7 @@
             width="200"
             style="margin: -40px 0px; filter: grayscale(100%);"
         >
-        <h3>PO. {{ $ticket->agent_name }} #{{ $ticket->agent_code }}</h3>
+        <h3>PO. {{ $ticket->agent_name }}</h3>
         <b class="text-sm">TELP. 021. 293 899 71, SMS 082221119500</b> <br>
         <span class="text-sm">
             www.agramasgroup.com
