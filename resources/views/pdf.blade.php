@@ -34,10 +34,14 @@
             width: 100%; /* Mengisi lebar penuh */
         }
         .text-sm{
-            font-size: 14px;
+            font-size: 12px;
         }
         .mt-2{
             margin-top: 2px;
+        }
+
+        b{
+            font-size: 14px;
         }
     </style>
 </head>
@@ -63,7 +67,6 @@
         <div style="width: 40%; float: left; text-align: center; display:flex; align-items:center">
             <div>
                 <br>
-                <br>
 
                 <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/800px-QR_code_for_mobile_English_Wikipedia.svg.png" alt=""
@@ -75,13 +78,15 @@
         </div>
         <div style="width: 60%; float: left">
             <div style="margin-right: 80px">
-                <table style="text-align: center">
-                    <tr style="vertical-align: top">
-                        <td>
+                <table style="text-align: center; width: 100% !important">
+                    <tr style="vertical-align: top; width: 100% !important">
+                        <td style="width: 50% !important">
+                            <div style="width: 85px"></div>
                             <b>Nama :</b> <br>
                             {{ $ticket->name }}
                         </td>
-                        <td>
+                        <td style="width: 50%">
+                            <div style="width: 85px"></div>
                             <b>Telephon :</b> <br>
                             <span class="text-sm">{{ $ticket->phone }} </span>
                         </td>
