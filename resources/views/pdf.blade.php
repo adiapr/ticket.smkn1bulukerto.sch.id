@@ -47,7 +47,7 @@
 </head>
 <body>
     <div class="content">
-        <img src="https://webstoriess.enkosa.com/wp-content/uploads/2024/01/Download-Logo-Bus-Agra-Mas-PNG.png" alt=""
+        <img src="{{ public_path('img/agramas.png') }}" alt="agramas logo"
             width="200"
             style="margin: -40px 0px; filter: grayscale(100%);"
         >
