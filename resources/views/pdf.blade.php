@@ -47,7 +47,7 @@
 </head>
 <body>
     <div class="content">
-        <img src="{{ public_path('img/agramas.png') }}" alt="agramas logo"
+        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('img/agramas.png'))) }}" alt="agramas logo"
             width="200"
             style="margin: -40px 0px; filter: grayscale(100%);"
         >

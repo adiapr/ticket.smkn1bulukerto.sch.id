@@ -46,7 +46,7 @@ class TickerController extends Controller
     public function show(string $id)
     {
         $data = [
-            'title' => 'Contoh Cetak PDF',
+            'title' => 'Tiket Agramas',
             'ticket' => Ticket::findOrFail($id) 
         ];
 
