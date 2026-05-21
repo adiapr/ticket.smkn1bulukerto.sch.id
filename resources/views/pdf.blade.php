@@ -69,9 +69,9 @@
                 <br>
 
                 <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/800px-QR_code_for_mobile_English_Wikipedia.svg.png" alt=""
-                    width="100"
-                >
+                        src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('img/qrcode.jpeg'))) }}" alt=""
+                        width="100"
+                    >
                 <br>
                 {{ $ticket->agent_code }} - {{ $ticket->chair_no }}
             </div>
